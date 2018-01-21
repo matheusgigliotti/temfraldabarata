@@ -2,9 +2,11 @@
 // 
 using System;
 using Autofac;
+using TemFraldaBarata.Core.Features;
 using TemFraldaBarata.Core.Features.Dialog;
 using TemFraldaBarata.Core.Features.Main;
 using TemFraldaBarata.Core.Features.Navigation;
+using TemFraldaBarata.Core.Features.Settings;
 
 namespace TemFraldaBarata.Core
 {
@@ -31,6 +33,7 @@ namespace TemFraldaBarata.Core
 			_containerBuilder.RegisterType<DialogService>().As<IDialogService>();
 
 			_containerBuilder.RegisterType<MainViewModel>();
+			_containerBuilder.RegisterType<SettingsViewModel>();
 		}
 
 		public T Resolve<T>() => _container.Resolve<T>();

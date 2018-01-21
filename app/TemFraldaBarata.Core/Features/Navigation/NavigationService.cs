@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TemFraldaBarata.Core.Features.Main;
 using Xamarin.Forms;
 
 namespace TemFraldaBarata.Core.Features.Navigation
@@ -25,7 +24,7 @@ namespace TemFraldaBarata.Core.Features.Navigation
 		}
 
 		public async Task InitializeAsync()
-			=> await NavigateToAsync<MainViewModel>();
+			=> await NavigateToAsync<Main.MainViewModel>();
 
 		public Task NavigateToAsync<TViewModel>() where TViewModel : ViewModelBase
 			=> InternalNavigateToAsync(typeof(TViewModel), null);
@@ -84,22 +83,15 @@ namespace TemFraldaBarata.Core.Features.Navigation
 		{
 			Page page = CreateAndBindPage(viewModelType, parameter);
 
-			if (page is MainView)
+			var navigationPage = CurrentApplication.MainPage as NavigationPage;
+
+			if (navigationPage != null)
 			{
-				CurrentApplication.MainPage = page;
+				await navigationPage.PushAsync(page);
 			}
 			else
 			{
-				var navigationPage = CurrentApplication.MainPage as NavigationPage;
-
-				if (navigationPage != null)
-				{
-					await navigationPage.PushAsync(page);
-				}
-				else
-				{
-					CurrentApplication.MainPage = new NavigationPage(page);
-				}
+				CurrentApplication.MainPage = new NavigationPage(page);
 			}
 
 			await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);
@@ -132,7 +124,10 @@ namespace TemFraldaBarata.Core.Features.Navigation
 		}
 
 		void CreatePageViewModelMappings()
-			=> _mappings.Add(typeof(MainViewModel), typeof(MainView));
+		{
+			_mappings.Add(typeof(Main.MainViewModel), typeof(Main.MainView));
+			_mappings.Add(typeof(Settings.SettingsViewModel), typeof(Settings.SettingsView));
+		}
 
 	}
 }

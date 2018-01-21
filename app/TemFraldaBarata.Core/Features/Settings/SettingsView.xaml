@@ -19,5 +19,20 @@
         </OnPlatform>
     </ContentPage.Padding>
     <ContentPage.Content>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="3*" />
+                <RowDefinition
+                    Height="7*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                Text="Configurações"
+                FontSize="Large" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

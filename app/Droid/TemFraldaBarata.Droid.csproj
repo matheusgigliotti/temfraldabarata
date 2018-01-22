@@ -136,8 +136,8 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TemFraldaBarata.Core\TemFraldaBarata.Core.csproj">
-      <Project>{43E8659B-C6D8-4B5F-8CB0-81AD95C1D1C2}</Project>
+    <ProjectReference Include="..\Core\TemFraldaBarata.Core.csproj">
+      <Project>{C8DC2795-F4F2-49B7-BDB1-71DDEF20CDCE}</Project>
       <Name>TemFraldaBarata.Core</Name>
     </ProjectReference>
   </ItemGroup>

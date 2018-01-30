@@ -134,7 +134,8 @@ namespace TemFraldaBarata.Core.Features.Navigation
 		{
 			_mappings.Add(typeof(MainViewModel), typeof(MainView));
 			_mappings.Add(typeof(SettingsViewModel), typeof(SettingsView));
-			_mappings.Add(typeof(FeedViewModel), typeof(FeedView));
+			_mappings.Add(typeof(DiapersViewModel), typeof(DiapersView));
+			_mappings.Add(typeof(OthersViewModel), typeof(OthersView));
 		}
 	}
 }

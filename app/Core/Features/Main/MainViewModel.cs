@@ -9,19 +9,32 @@ namespace TemFraldaBarata.Core.Features
 {
 	public class MainViewModel : ViewModelBase
 	{
-		FeedViewModel _feedViewModel;
+		DiapersViewModel _diapersViewModel;
 		SettingsViewModel _settingsViewModel;
+		OthersViewModel _othersViewModel;
 
-		public FeedViewModel FeedViewModel
+		public DiapersViewModel DiapersViewModel
 		{
 			get
 			{
-				return _feedViewModel;
+				return _diapersViewModel;
 			}
-
 			set
 			{
-				_feedViewModel = value;
+				_diapersViewModel = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public OthersViewModel OthersViewModel
+		{
+			get
+			{
+				return _othersViewModel;
+			}
+			set
+			{
+				_othersViewModel = value;
 				OnPropertyChanged();
 			}
 		}
@@ -32,7 +45,6 @@ namespace TemFraldaBarata.Core.Features
 			{
 				return _settingsViewModel;
 			}
-
 			set
 			{
 				_settingsViewModel = value;
@@ -40,19 +52,13 @@ namespace TemFraldaBarata.Core.Features
 			}
 		}
 
-		public MainViewModel(FeedViewModel feedViewModel,
-							 SettingsViewModel settingsViewModel)
+		public MainViewModel(DiapersViewModel diapersViewModel,
+							 SettingsViewModel settingsViewModel,
+							 OthersViewModel othersViewModel)
 		{
-			_feedViewModel = feedViewModel;
+			_diapersViewModel = diapersViewModel;
 			_settingsViewModel = settingsViewModel;
+			_othersViewModel = othersViewModel;
 		}
-
-		//public override Task InitializeAsync(object navigationData)
-		//{
-		//	return Task.WhenAll
-		//		(
-		//			NavigationService.NavigateToAsync<FeedViewModel>(navigationData)
-		//		);
-		//}
 	}
 }

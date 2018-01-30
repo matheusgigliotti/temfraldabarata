@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="TemFraldaBarata.Core.Features.Main.MainView"
+    x:Class="TemFraldaBarata.Core.Features.OthersView"
     Title="{Binding Title}">
     <ContentPage.Padding>
         <OnPlatform
@@ -25,37 +25,14 @@
                 <RowDefinition
                     Height="3*" />
                 <RowDefinition
-                    Height="1*" />
-                <RowDefinition
-                    Height="6*" />
+                    Height="7*" />
             </Grid.RowDefinitions>
             <Label
                 Grid.Row="0"
                 VerticalOptions="End"
                 HorizontalOptions="Center"
-                Text="Tem Fralda Barata "
+                Text="{Binding Title}"
                 FontSize="Large" />
-            <Label
-                Grid.Row="1"
-                VerticalOptions="Start"
-                HorizontalOptions="Center"
-                Text="Aplicativo demo"
-                FontSize="Micro" />
-            <Grid
-                Margin="22"
-                Grid.Row="2"
-                RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition
-                        Height="8*" />
-                    <RowDefinition
-                        Height="54" />
-                </Grid.RowDefinitions>
-                <Button
-                    Grid.Row="1"
-                    Text="Configurações"
-                    Command="{Binding SettingsCommand}" />
-            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

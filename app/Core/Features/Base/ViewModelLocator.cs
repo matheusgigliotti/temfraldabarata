@@ -17,10 +17,7 @@ namespace TemFraldaBarata.Core
 
 		public static ViewModelLocator Instance
 		{
-			get
-			{
-				return _instance;
-			}
+			get => _instance;
 		}
 
 		public ViewModelLocator()
@@ -32,7 +29,8 @@ namespace TemFraldaBarata.Core
 
 			_containerBuilder.RegisterType<MainViewModel>();
 			_containerBuilder.RegisterType<SettingsViewModel>();
-			_containerBuilder.RegisterType<FeedViewModel>();
+			_containerBuilder.RegisterType<DiapersViewModel>();
+			_containerBuilder.RegisterType<OthersViewModel>();
 		}
 
 		public T Resolve<T>() => _container.Resolve<T>();

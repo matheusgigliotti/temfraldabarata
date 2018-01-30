@@ -2,8 +2,8 @@
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="TemFraldaBarata.Core.Features.FeedView"
-    Title="{Binding Title}" Icon="icon">
+	x:Class="TemFraldaBarata.Core.Features.DiapersView"
+    Title="{Binding Title}">
 	  <ContentPage.Padding>
         <OnPlatform
             x:TypeArguments="Thickness">
@@ -31,7 +31,7 @@
                 Grid.Row="0"
                 VerticalOptions="End"
                 HorizontalOptions="Center"
-                Text="Feed"
+                Text="{Binding Title}"
                 FontSize="Large" />
         </Grid>
     </ContentPage.Content>

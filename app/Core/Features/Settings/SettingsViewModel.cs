@@ -5,9 +5,8 @@ namespace TemFraldaBarata.Core.Features
 {
 	public class SettingsViewModel : ViewModelBase
 	{
-		public SettingsViewModel()
+		public SettingsViewModel() : base("Configurações")
 		{
-			Title = "Configurações";
 		}
 	}
 }

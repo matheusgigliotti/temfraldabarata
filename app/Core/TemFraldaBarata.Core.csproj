@@ -8,6 +8,12 @@
     <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Features\Diapers\FeedView.xaml.cs">
+      <DependentUpon>FeedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Features\Diapers\DiapersView.xaml.cs">
+      <DependentUpon>DiapersView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
@@ -21,6 +27,7 @@
     <Folder Include="Features\Main\" />
     <Folder Include="Features\Dialog\" />
     <Folder Include="Features\Settings\" />
-    <Folder Include="Features\Feed\" />
+    <Folder Include="Features\Diapers\" />
+    <Folder Include="Features\Others\" />
   </ItemGroup>
 </Project>

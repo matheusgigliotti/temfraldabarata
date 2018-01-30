@@ -3,11 +3,11 @@
 using System;
 namespace TemFraldaBarata.Core.Features
 {
-	public class FeedViewModel : ViewModelBase
+	public class DiapersViewModel : ViewModelBase
 	{
-		public FeedViewModel()
+		public DiapersViewModel() : base("Fraldas")
 		{
-			Title = "Feed";
+
 		}
 	}
 }

@@ -27,8 +27,11 @@ namespace TemFraldaBarata.Core.Features
 			set { _isBusy = value; OnPropertyChanged(); }
 		}
 
-		public ViewModelBase()
+		protected ViewModelBase() { }
+
+		protected ViewModelBase(string title)
 		{
+			Title = title;
 			NavigationService = ViewModelLocator.Instance.Resolve<INavigationService>();
 			DialogService = ViewModelLocator.Instance.Resolve<IDialogService>();
 		}

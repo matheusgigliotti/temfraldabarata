@@ -1,4 +1,4 @@
-﻿// FeedView.xaml.cs
+﻿// OthersView.xaml.cs
 // 
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace TemFraldaBarata.Core.Features
 {
-	public partial class FeedView : ContentPage
+	public partial class OthersView : ContentPage
 	{
-		public FeedView()
+		public OthersView()
 		{
 			InitializeComponent();
 		}

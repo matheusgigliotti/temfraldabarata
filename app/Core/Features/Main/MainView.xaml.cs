@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace TemFraldaBarata.Core.Features
 {
-	public partial class MainView : TabbedPage
+	public partial class MainView : BottomBar.XamarinForms.BottomBarPage
 	{
 		public MainView()
 		{

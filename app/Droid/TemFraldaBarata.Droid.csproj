@@ -131,15 +131,32 @@
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_diaper.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_feeding_bottle.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_picture.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_diaper.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_feeding_bottle.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_picture.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_diaper.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_feeding_bottle.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_picture.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_diaper.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_feeding_bottle.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_picture.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_diaper.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_feeding_bottle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_picture.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\TemFraldaBarata.Core.csproj">
       <Project>{C8DC2795-F4F2-49B7-BDB1-71DDEF20CDCE}</Project>
       <Name>TemFraldaBarata.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />

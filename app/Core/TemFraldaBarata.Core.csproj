@@ -30,5 +30,6 @@
     <Folder Include="Features\Settings\" />
     <Folder Include="Features\Diapers\" />
     <Folder Include="Features\Others\" />
+    <Folder Include="Features\Offers\" />
   </ItemGroup>
 </Project>

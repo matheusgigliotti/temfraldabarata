@@ -125,12 +125,6 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\TemFraldaBarata.Core.csproj">
-      <Project>{C8DC2795-F4F2-49B7-BDB1-71DDEF20CDCE}</Project>
-      <Name>TemFraldaBarata.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\icon_diaper%401x.png" />
     <BundleResource Include="Resources\icon_diaper%402x.png" />
     <BundleResource Include="Resources\icon_diaper%403x.png" />
@@ -140,6 +134,12 @@
     <BundleResource Include="Resources\icon_picture.png" />
     <BundleResource Include="Resources\icon_picture%402x.png" />
     <BundleResource Include="Resources\icon_picture%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\TemFraldaBarata.Core.csproj">
+      <Project>{C8DC2795-F4F2-49B7-BDB1-71DDEF20CDCE}</Project>
+      <Name>TemFraldaBarata.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.122203\build\netstandard1.0\Xamarin.Forms.targets')" />

@@ -2,6 +2,7 @@
 // 
 using Foundation;
 using UIKit;
+using TemFraldaBarata.Core;
 
 namespace TemFraldaBarata.iOS
 {
@@ -12,7 +13,7 @@ namespace TemFraldaBarata.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			LoadApplication(new Core.App());
+			LoadApplication(new TemFraldaBarata.Core.App());
 
 			return base.FinishedLaunching(app, options);
 		}
